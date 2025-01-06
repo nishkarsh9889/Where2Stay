@@ -36,7 +36,7 @@ public class RoomService implements IRoomService {
             Files.createDirectories(filePath.getParent());
             Files.write(filePath, photo.getBytes());
 
-            String fileUrl = "http://localhost:8080/Backend/images/" + fileName;
+            String fileUrl = "https://where-2-stay.vercel.app/Backend/images/" + fileName;
 
             Room room = new Room();
             room.setRoomPhotoUrl(fileUrl);
@@ -113,7 +113,7 @@ public class RoomService implements IRoomService {
                 Files.createDirectories(filePath.getParent());
                 Files.write(filePath, photo.getBytes());
     
-                imageUrl = "http://localhost:8080/Backend/images/" + fileName;
+                imageUrl = "https://where-2-stay.vercel.app/Backend/images/" + fileName;
             }
             
             Room room = roomRepo.findById(roomId).orElseThrow(() -> new OurException("Room Not Found"));
