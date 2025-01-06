@@ -24,8 +24,8 @@ public class PaymentService implements IPaymentService {
                 SessionCreateParams params = SessionCreateParams.builder().addPaymentMethodType(
                                 SessionCreateParams.PaymentMethodType.CARD)
                                 .setMode(SessionCreateParams.Mode.PAYMENT)
-                                .setSuccessUrl("http://localhost:5173/payment/success/")
-                                .setCancelUrl("http://localhost:5173/payment/failed/")
+                                .setSuccessUrl("https://where-2-stay.vercel.app/payment/success/")
+                                .setCancelUrl("https://where-2-stay.vercel.app/payment/failed/")
                                 .addLineItem(SessionCreateParams.LineItem.builder()
                                                 .setQuantity(1L)
                                                 .setPriceData(SessionCreateParams.LineItem.PriceData.builder()
